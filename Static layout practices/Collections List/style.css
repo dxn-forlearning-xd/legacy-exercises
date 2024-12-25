@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position:relative;
+}
+
+h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(244, 239, 239);
+    box-shadow: 0 50px 20px -10px rgba(216, 215, 215, 0.5);
+    border-radius: 15px;
+    padding: 30px;
+    
+}
+
+.tags{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 25px;
+}
+
+span{
+    background-color: white;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+
+}
+
+.pics{
+    display: flex;
+    gap: 5px;
+}
+
+.pic{
+    background-color: white;
+    border-radius: 15px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+}
+
+
+.pic-small{
+    display: flex;
+    gap: 10px;
+}
+
+.large{
+    width: 215px;
+    height: 150px;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.small{
+    width: 65px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+.name{
+    display: flex;
+    margin-right: auto;
+    margin-left: 20px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.name svg{
+    margin-left: 120px;
+}
+
+
+.container::after{
+    content: '';
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: rgb(249, 230, 230);
+    position: absolute;
+    top: 460px;
+    left: 100px;
+    z-index: -1;
+    
+}
+
+.container::before {
+    content: '';
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgb(249, 230, 230);
+    position: absolute;
+    top: 0px;
+    left: 600px;
+    z-index: -1;
+
+}
