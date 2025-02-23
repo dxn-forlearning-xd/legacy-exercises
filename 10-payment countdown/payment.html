@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="payment-style.css" />
+    <title>payment successfull</title>
+  </head>
+  <body>
+    <div class="card">
+      <h1>You order has been confirmed!</h1>
+      <p>Return to the cart page in <span id="countdown">10</span> seconds.</p>
+      <button class="return">Return now</button>
+    </div>
+    <script>
+      window.onload = function () {
+        let timer = 5;
+
+        document.getElementById('countdown').innerText = timer;
+        setInterval(() => {
+          timer--;
+          document.getElementById('countdown').innerText = timer;
+          if (timer === 0) {
+            location.href = 'index.html';
+          }
+        }, 1000);
+      };
+
+      const returnButton = document.querySelector('.return');
+      returnButton.addEventListener('click', function () {
+        location.href = 'index.html';
+      });
+    </script>
+  </body>
+</html>
