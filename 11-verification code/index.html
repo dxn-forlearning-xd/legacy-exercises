@@ -9,7 +9,7 @@
     <div class="v-code">
       <div class="show-code">
         <span class="code" id="checkCode">sa75ce</span>
-        <a id="another">Change another one</a>
+        <a id="another">change another one</a>
       </div>
       <div class="input">
         <label for="inputCode">verification code</label>
@@ -19,5 +19,52 @@
 
       <input type="button" id="button" value="confirm" />
     </div>
+
+    <script>
+      window.onload = function () {
+        var res = getCode();
+        function getCode() {
+          var arr = [
+            '1',
+            '2',
+            '3',
+            '4',
+            '6',
+            '7',
+            '8',
+            '9',
+            '0',
+            'a',
+            's',
+            'd',
+            'f',
+            'g',
+            'h',
+            'j',
+            'k',
+            'l',
+          ];
+          var str = '';
+          for (var i = 0; i < 6; i++) {
+            var num = Math.round(Math.random() * (15 - 0) + 0);
+            str += arr[num];
+          }
+          return str;
+        }
+        document.getElementById('checkCode').innerText = res;
+        document.getElementById('another').onclick = function () {
+          document.getElementById('checkCode').innerText = getCode();
+        };
+        document.getElementById('button').onclick = function () {
+          var code = document.getElementById('checkCode').innerText;
+          var inputCode = document.getElementById('inputCode').value;
+          if (code != inputCode) {
+            alert('The code is not correct.');
+            document.getElementById('inputCode').value = '';
+            return false;
+          }
+        };
+      };
+    </script>
   </body>
 </html>
