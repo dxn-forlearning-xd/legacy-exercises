@@ -1,40 +1,99 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background: rgb(252, 239, 214);
+  text-align: center;
+  color: rgb(14, 36, 67);
+  padding: 20px;
 }
 
-.todo-grid,
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
 .todo-input-grid {
-  display: grid;
-  grid-template-columns: 200px 150px 100px;
-  column-gap: 10px;
-  row-gap: 10px;
-  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
-.todo-input-grid {
-  margin-bottom: 10px;
-  align-items: stretch;
-}
-
-.name.input,
-.due-date-input {
-  font-size: 15px;
-  padding: 6px;
-}
-
-.add-todo-button,
-.delete-todo-button {
-  color: white;
+input {
+  padding: 10px;
+  border-radius: 5px;
   border: none;
-  font-size: 15px;
-  cursor: pointer;
+  font-size: 16px;
 }
 
 .add-todo-button {
-  background-color: green;
+  background: #37ab52;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-todo-button:hover {
+  background: #218838;
+}
+
+.error-message {
+  color: rgb(220, 25, 25);
+  font-size: 14px;
+  height: 20px;
+}
+
+.todo-list {
+  margin-top: 20px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.todo-name {
+  flex: 1;
+  text-align: left;
+}
+
+.todo-date {
+  font-size: 14px;
+  color: #222;
 }
 
 .delete-todo-button {
-  background-color: darkred;
-  padding: 10px 0 10px 0;
+  background: rgb(204, 41, 41);
+  color: white;
+  border: none;
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-todo-button:hover {
+  background: rgb(182, 11, 11);
+}
+
+.toggle-checkbox {
+  margin-right: 10px;
 }
