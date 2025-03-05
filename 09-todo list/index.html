@@ -2,27 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p>Todo List</p>
-    <div class="todo-input-grid">
-      <input
-        type="text"
-        class="js-add name-input"
-        placeholder="Todo name"
-        onkeydown="if(event.key ==='Enter'){addTodo();renderTodolist()}"
-      />
-      <input type="date" class="js-date due-date-input" />
-      <button class="add-todo-button" onclick="addTodo();renderTodolist()">
-        Add
-      </button>
+    <div class="container">
+      <h1>Todo List</h1>
+      <div class="todo-input-grid">
+        <input
+          type="text"
+          class="js-add name-input"
+          placeholder="Enter task name"
+        />
+        <input type="date" class="js-date due-date-input" />
+        <button class="add-todo-button">Add</button>
+      </div>
+      <p class="error-message"></p>
+      <div class="todo-list"></div>
     </div>
 
-    <div class="todo-list todo-grid"></div>
     <script src="script.js"></script>
   </body>
 </html>
