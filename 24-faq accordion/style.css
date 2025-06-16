@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: hsl(275, 100%, 97%);
+  height: 100vh;
+  background-image: url('./svgviewer-png-output.png');
+  background-repeat: no-repeat;
+  background-size: 100% 35vh;
+  color: hsl(292, 42%, 14%);
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.container {
+  width: 70%;
+  max-width: 700px;
+  background-color: hsl(0, 100%, 100%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3em;
+  border-radius: 10px;
+}
+
+.title {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.question-row {
+  display: flex;
+}
+
+.card,
+.faq-list,
+.faq-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+span,
+h3 {
+  cursor: pointer;
+}
+
+h3 {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h3:hover {
+  color: #ad28eb;
+  transform: scale(1.01);
+}
+
+.hide {
+  display: none;
+}
