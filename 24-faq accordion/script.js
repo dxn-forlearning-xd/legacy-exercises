@@ -13,5 +13,17 @@ questionRows.forEach((row) => {
     if (!isVisible) {
       answer.classList.remove('hide');
     }
+    let iconPlus = row.querySelector('.icon-plus');
+    let iconMinus = row.querySelector('.icon-minus');
+
+    iconPlus.classList.remove('hide');
+    iconMinus.classList.add('hide');
+
+    if (!isVisible) {
+      answer.classList.remove('hide');
+
+      iconPlus.classList.add('hide');
+      iconMinus.classList.remove('hide');
+    }
   });
 });
