@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="header">
+          <img src="./images/logo-d.svg" class="header-logo" alt="" />
+          <button class="theme-toggle">
+            <img src="./images/icon-sun.svg" alt="" />
+          </button>
+        </div>
+        <div class="extensions-list">
+          <div class="extensions-title">
+            <h1>Extensions List</h1>
+            <div class="extensions-filter">
+              <button class="filter-btn" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="active">Active</button>
+              <button class="filter-btn" data-filter="inactive">
+                Inactive
+              </button>
+            </div>
+          </div>
+          <div class="extensions-section">
+            <div class="extensions-card"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
