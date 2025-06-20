@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper form-page">
+        <img src="./images/logo-full.svg" alt="" />
+        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <h2>Secure your spot at next year's biggest coding conference.</h2>
+        <div>
+          <label class="upload-box">
+            <input type="file" />
+            <div class="upload-content">
+              <img src="./images/icon-upload.svg" alt="" />
+              <p>Drag and drop or click to upload</p>
+            </div>
+          </label>
+          <div class="hint">
+            <img src="./images/icon-info.svg" alt="" />
+            <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
+          </div>
+          <p class="error-upload error hidden">File too large.</p>
+          <span>Full Name</span>
+          <label class="form-field">
+            <input type="text" name="fullname" />
+          </label>
+          <p class="error-name error hidden">This field is required.</p>
+
+          <span>Email Address</span>
+          <label class="form-field">
+            <input type="email" name="email" />
+          </label>
+          <p class="error-email error hidden">This field is required.</p>
+
+          <span>GitHub Username</span>
+          <label class="form-field">
+            <input type="text" name="github" />
+          </label>
+          <p class="error-github error hidden">This field is required.</p>
+
+          <button>Generate My Ticket</button>
+        </div>
+      </div>
+      <div class="wrapper form-result hidden">
+        <img src="./images/logo-full.svg" alt="" />
+        <h1>Congrats,<span> Jonatan Kristof</span>! Your ticket it sready.</h1>
+        <h2>We've emailed your ticket to <span>Jonatan@email.com.</span></h2>
+        <div class="ticket">
+          <img
+            class="pattern-ticket"
+            src="./images/pattern-ticket.svg"
+            alt=""
+          />
+          <div class="info">
+            <img src="./images/logo-full.svg" alt="" />
+            <p>Jan 31, 2025 / Austin, TX</p>
+            <div class="user">
+              <img src="./images/image-avatar.jpg" alt="" />
+              <div class="contact">
+                <span class="user-name">Jonatan Kristof</span>
+                <div class="github">
+                  <img src="./images/icon-github.svg" alt="" />
+                  <span class="user-github">@JonatanKristof0101</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
